@@ -10,7 +10,7 @@ body{
 }
 
 #login-card{
-  margin-top: 5vw;
+  margin-top: 5%;
 }
 
 #login-logo{
@@ -21,7 +21,15 @@ body{
   width: 100%;
   background:#FD7361;
   border-radius: 10px;
-  height: 3vw;
+}
+
+.blue-url{
+  text-decoration: underline;
+  font-weight: bold;
+  color:#039be5;
+}
+
+#help-blurb{
 }
 
 
