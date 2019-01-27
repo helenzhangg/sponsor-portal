@@ -9,6 +9,25 @@ body{
    font-family: 'HelveticaNeue-Roman', sans-serif;
 }
 
+h4{
+  font-size: 2.5vw !important;
+}
+
+td, tr{
+  font-size: 1.1vw;
+}
+
+.a-size{
+  font-size:1.4vw!important;
+}
+
+label{
+  font-size:1.1vw !important;
+}
+
+select option{
+  font-size:10em !important;
+}
 
 #login-card{
   margin-top: 5%;
@@ -63,8 +82,8 @@ body{
 
 #nav-bar-message{
   position: fixed;
-  margin-left: 1em;
-  font-size: 1.2em;
+  margin-left: 1vw;
+  font-size: 1.4vw;
 }
 
 #export-menu-options{
@@ -88,6 +107,7 @@ margin-top: -3.5vw;
 
 .checkbox-label{
   color:#424242;
+  font-size: 1.2vw !important;
 }
 
 .tt-blue{
