@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body id="dashboard-body">
+  <div class="navbar-fixed">
+    <nav id="techtogether-nav">
+      <div class="nav-wrapper">
+        <!-- <a href="#" class="brand-logo">Logo</a> -->
+        <img src="assets/imgs/techtogether-white.png" alt="" id="navbar-logo">
+        <span id="nav-bar-message" class="lighter">Sponsor Resume Portal - WayFair</span>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Candidates</a></li>
+          <li><a href="#">Comments</a></li>
+          <li><a class="waves-effect waves-light btn tt-pink">Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Page Layout here -->
+  <div class="row">
+
+    <div class="col s5 grey lighten-3 z-depth-1" id="filter-menu">
+      <div class="row" >
+
+
+
+      <h4 class="lighter">Filters</h4>
+      <div class="filter-buttons">
+        <a class="waves-effect waves-light btn tt-pink" id="apply-filter-button">Apply</a>
+        <a class="waves-effect waves-light btn grey lighten-1 black-text">Clear All</a>
+      </div>
+      <div class="filter-options">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="school_name" type="text" class="validate">
+            <label for="school_name">School Name</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="major" type="text" class="validate">
+            <label for="major">Major</label>
+          </div>
+          <div class="input-field col s2">
+            <select>
+              <option value="" disabled selected>Year</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+            <label>Graduation</label>
+          </div>
+
+
+        </div>
+        <!--Using https://materializecss.com/select.html -->
+        <div class="row">
+          <div class="input-field col s6">
+            <select multiple>
+              <option value="" disabled>Choose your option</option>
+              <option value="1">Mobile App Development</option>
+              <option value="2">Web Development</option>
+              <option value="3">Data Science</option>
+              <option value="4">Machine Learning</option>
+              <option value="5">AR/VR</option>
+              <option value="6">Hardware</option>
+              <option value="7">IoT</option>
+              <option value="8">Gaming</option>
+              <option value="9">Other</option>
+            </select>
+            <label class="filter-label">Interests</label>
+          </div>
+
+          <div class="input-field col s6">
+            <select multiple>
+              <option value="" disabled>Choose your option</option>
+              <option value="1">Python</option>
+              <option value="2">Java</option>
+              <option value="3">JavaScript</option>
+              <option value="4">HTML</option>
+              <option value="5">CSS</option>
+              <option value="6">C++</option>
+              <option value="7">C</option>
+              <option value="8">Go</option>
+            </select>
+            <label class="filter-label">Programming Language</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <!--https://materializecss.com/checkboxes.html  -->
+          <div class="col s4">
+            <p>
+              <label>
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span class="checkbox-label">GitHub</span>
+                </label>
+            </p>
+          </div>
+
+          <div class="col s4">
+
+            <p>
+              <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span class="checkbox-label">LinkedIn</span>
+                </label>
+            </p>
+          </div>
+          <div class="col s4">
+            <p>
+              <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span class="checkbox-label">Personal Site</span>
+                </label>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4">
+            <input id="school_name" type="text" class="validate">
+            <label for="school_name">First Name</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="school_name" type="text" class="validate">
+            <label for="school_name">Last Name</label>
+          </div>
+          <div class="input-field col s4">
+            <input id="school_name" type="text" class="validate">
+            <label for="school_name">Email</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="export-menu-options">
+<h4 class="lighter" style="float:left">Export Results</h4>
+<div id="export-buttons">
+  <a class="waves-effect waves-light btn tt-green">CSV</a>
+  <a class="waves-effect waves-light btn tt-green">XML</a>
+  <a class="waves-effect waves-light btn tt-green">JSON</a>
+</div>
+
+    </div>
+    </div>
+
+    <div class="col s7 offset-s5" id="right-panel">
+      <table class="striped">
+        <thead id="col-names">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>School</th>
+            <th>Major</th>
+            <th>Graduation Year</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Helen</td>
+            <td>Zhang</td>
+            <td>Boston University</td>
+            <td>Computer Science</td>
+            <td>2019</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <td>Some</td>
+            <td>Hacker</td>
+            <td>Some University</td>
+            <td>Some Major</td>
+            <td>2022</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('select').formSelect();
+    });
+  </script>
+
+</body>
+
+</html>
