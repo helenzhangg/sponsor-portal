@@ -106,9 +106,19 @@ margin-left: 2vw;
   padding-right: 3vw;
 }
 
-.note{
-  
+.page-width{
+  width: 90% !important;
 }
+
+.delete-note-button{
+  margin-top: 2vw !important;
+}
+
+.note-card-padding{
+  padding-left: 1vw !important;
+  margin-right: 1vw !important;
+}
+
 #download-resume-button{
   width: 100%;
   height: 2.4vw;
