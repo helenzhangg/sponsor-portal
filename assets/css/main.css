@@ -191,3 +191,28 @@ margin-top: -3.5vw;
 .lighter{
   font-weight: lighter;
 }
+
+/*Mobile responsiveness*/
+
+#mobile-disclaimer{
+  display: none;
+  width: 90% !important;
+  margin: 5%;
+  height: 100% !important;
+  z-index: 100 !important;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+
+  h4{
+    font-size: 2em !important;
+  }
+
+  #mobile-disclaimer{
+    display: block;
+  }
+
+  .desktop-only{
+    display: none;
+  }
+}
